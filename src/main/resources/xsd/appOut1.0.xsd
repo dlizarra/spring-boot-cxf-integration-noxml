@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.dlizarra.com/app/out" 
+	targetNamespace="http://www.dlizarra.com/app/out">
+	
+	<element name="SayHiResponse" type="tns:SayHiResponse" />
+	
+    <complexType name="SayHiResponse">
+    	<sequence>
+    		<element name="message" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

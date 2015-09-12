@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.dlizarra.com/app"
+    xmlns:tns="http://www.dlizarra.com/app"    
+    xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+    xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:app="http://www.dlizarra.com/app"
+	xmlns:in="http://www.dlizarra.com/app/in" 
+	xmlns:out="http://www.dlizarra.com/app/out">    
+    
+    
+    <wsdl:types >
+    	<xs:schema xmlns="http://www.w3.org/2001/XMLSchema"
+    		targetNamespace="http://www.dlizarra.com/app">
+   		<xs:include schemaLocation="../xsd/app1.0.xsd" />
+    	</xs:schema>	
+    </wsdl:types>        
+	    
+    <wsdl:message name="SayHiRequest">    	
+        <wsdl:part name="sayHiRequest" element="in:SayHiRequest"/>
+    </wsdl:message>    
+    <wsdl:message name="SayHiResponse">  	
+        <wsdl:part name="sayHiResponse" element="out:SayHiResponse"/>
+    </wsdl:message>        
+   
+    <wsdl:portType name="AppWS">
+		<wsdl:operation name="sayHi">
+            <wsdl:input message="tns:SayHiRequest" />
+            <wsdl:output message="tns:SayHiResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    
+	<wsdl:binding name="AppBinding" type="tns:AppWS">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="sayHi">
+			<soap:operation soapAction=""/>
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>    
+    
+    <wsdl:service name="AppService">
+        <wsdl:port binding="tns:AppBinding" name="AppPort">
+            <soap:address location="http://localhost:8080/soap/app" />
+        </wsdl:port>
+    </wsdl:service>
+    
+</wsdl:definitions>

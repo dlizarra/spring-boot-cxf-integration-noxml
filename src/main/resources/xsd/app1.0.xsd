@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.dlizarra.com/app"
+	targetNamespace="http://www.dlizarra.com/app"
+	xmlns:in="http://www.dlizarra.com/app/in" 
+	xmlns:out="http://www.dlizarra.com/app/out">	
+	
+	<import schemaLocation="appIn1.0.xsd" namespace="http://www.dlizarra.com/app/in" />	
+	<import schemaLocation="appOut1.0.xsd" namespace="http://www.dlizarra.com/app/out" />
+</schema>
