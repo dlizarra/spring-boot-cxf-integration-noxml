@@ -39,7 +39,7 @@ public class Application {
     }
     
     @Bean
-    // <jaxws:endpoint id="appWS" implementor="com.dlizarra.app.ws.AppWSImpl" address="/app>
+    // <jaxws:endpoint id="appWS" implementor="com.dlizarra.app.ws.AppWSImpl" address="/app">
     public EndpointImpl appWS() {
         Bus bus = (Bus) applicationContext.getBean(Bus.DEFAULT_BUS_ID);
         Object implementor = new AppWSImpl();
