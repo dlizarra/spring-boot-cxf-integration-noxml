@@ -1,10 +1,10 @@
 package com.dlizarra.app.ws;
 
-import com.dlizarra.app.AppWS;
+import com.dlizarra.app.App;
 import com.dlizarra.app.in.SayHiRequest;
 import com.dlizarra.app.out.SayHiResponse;
 
-public class AppWSImpl implements AppWS{
+public class AppImpl implements App{
 
 	@Override
 	public SayHiResponse sayHi(SayHiRequest sayHiRequest) {
