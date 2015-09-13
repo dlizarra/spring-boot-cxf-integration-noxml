@@ -37,4 +37,4 @@ For a full Java Configuration we will only need [three](src/main/java/com/dlizar
 ### Deploying and accessing the web service
 Just run `mvn spring-boot:run` as usuall with a Spring Boot webapp and access the web service at `http://localhost:8080/cxf-servlet-url/endpoint-url`.
 
-And that's all there is to develop a contract-first JAX-WS SOAP web service with Spring Boot and CXF with absolutely no XML configuration.
+And those were all the steps needed to develop a contract-first JAX-WS SOAP web service with Spring Boot and CXF with absolutely no XML configuration.
