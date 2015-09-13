@@ -32,9 +32,9 @@ Then you just need to create your web service class with implements the generate
 For a full Java Configuration we will only need [three](src/main/java/com/dlizarra/app/config/Application.java) beans:
 - A `ServletRegistrationBean` to register the CXF servlet with the url mapping of our choice.
 - A `SpringBus` bean explicitly named 'cxf' to instantiate the CXF Bus.
-- An `Endpoint` bean representing the web service endpoint and where we can access it.
+- An `Endpoint` bean representing the web service endpoint with the url where we can access it.
 
 ### Deploying and accessing the web service
-Just run `mvn spring-boot:run` as usuall with a Spring Boot webapp and access the web service at `http://localhost:8080/cxf-servlet-url/endpoint-url`.
+Just run `mvn spring-boot:run` as usual with a Spring Boot webapp and access the web service at `http://localhost:8080/cxf-servlet-url/endpoint-url`.
 
 And those were all the steps needed to develop a contract-first JAX-WS SOAP web service with Spring Boot and CXF with absolutely no XML configuration.
