@@ -9,7 +9,6 @@ public class AppImpl implements App{
 	@Override
 	public SayHiResponse sayHi(SayHiRequest sayHiRequest) {
 		String message = "Hi " + sayHiRequest.getYourName() + "!";
-		System.out.println(message);		
 		SayHiResponse response = new SayHiResponse();
 		response.setMessage(message);
 		return response;
